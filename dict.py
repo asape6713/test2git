@@ -17,10 +17,10 @@ def add_word(conn, word, translation):
     cur.execute(f"INSERT INTO dictionary (word, translation) VALUES ('{word}', '{translation}');")
     cur.close()
 def delete_word(conn, ID):
-    cur = C.cursor()
+    cur = conn.cursor()
     cur.execute(f"DELETE FROM dictionary WHERE id = '{ID}';")
     cur.close()
-def save_dict(conn:
+def save_dict(conn,id)
     cur = conn.cursor()
     cur.execute("COMMIT;")
     cur.close()
