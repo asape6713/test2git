@@ -25,6 +25,8 @@ def save_dict(conn:
     cur.execute("COMMIT;")
     cur.close()
 
+def insert_word (conn, word, translation)
+    print("word")
 while True: ## REPL - Read Execute Program Loop
     cmd = input("Command: ")
     if cmd == "list":
